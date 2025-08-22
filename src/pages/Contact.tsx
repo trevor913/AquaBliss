@@ -373,16 +373,17 @@ const Contact = () => {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Quantity *
                       </label>
-                      <select
+                      <input
+                        type="number"
                         name="quantity"
                         value={formData.quantity}
                         onChange={handleChange}
+                        required
+                        min="1"
+                        step="1"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-colors"
-                      >
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
-                          <option key={num} value={num}>{num}</option>
-                        ))}
-                      </select>
+                        placeholder="Enter quantity (e.g., 5, 20, 100)"
+                      />
                     </div>
                   </div>
                 </div>
